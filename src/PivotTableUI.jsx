@@ -70,7 +70,7 @@ export class DraggableAttribute extends React.Component {
             <p>
               <input
                 type="text"
-                placeholder="Filter values"
+                placeholder="Filtro.."
                 className="pvtSearch"
                 value={this.state.filterText}
                 onChange={e =>
@@ -92,7 +92,7 @@ export class DraggableAttribute extends React.Component {
                   )
                 }
               >
-                Select {values.length === shown.length ? 'All' : shown.length}
+                Selecionar {values.length === shown.length ? 'Todos' : shown.length}
               </a>{' '}
               <a
                 role="button"
@@ -106,7 +106,7 @@ export class DraggableAttribute extends React.Component {
                   )
                 }
               >
-                Deselect {values.length === shown.length ? 'All' : shown.length}
+                Desmarcar {values.length === shown.length ? 'Todos' : shown.length}
               </a>
             </p>
           )}
@@ -118,13 +118,13 @@ export class DraggableAttribute extends React.Component {
                   key={x}
                   onClick={() => this.toggleValue(x)}
                   className={x in this.props.valueFilter ? '' : 'selected'}
-                >
-                  <a className="pvtOnly" onClick={e => this.selectOnly(e, x)}>
-                    only
-                  </a>
+                > 
+                  
+                  {x === '' ? <em>null</em> :  x}
                   <a className="pvtOnlySpacer">&nbsp;</a>
-
-                  {x === '' ? <em>null</em> : x}
+                  <a className="pvtOnly" onClick={e => this.selectOnly(e, x)}>
+                    {'\t\t\t\t\tapenas'}
+                  </a>
                 </p>
               ))}
             </div>

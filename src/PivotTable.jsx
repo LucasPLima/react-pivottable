@@ -23,7 +23,7 @@ PivotTable.propTypes = Object.assign({}, PivotData.propTypes, {
 });
 
 PivotTable.defaultProps = Object.assign({}, PivotData.defaultProps, {
-  rendererName: 'Table',
+  rendererName: 'Tabela',
   renderers: TableRenderers,
 });
 
